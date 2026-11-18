@@ -1,0 +1,1228 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>黑料社区官网二维码-入口识别与防伪指南</title>
+<meta name="description" content="黑料社区官网二维码怎么核对？整理入口识别的检查清单、二维码防伪要点、常见仿冒特征与本月入口变更记录，附扫码前后的验证方法和用户实测反馈，帮助判断入口真伪。">
+<meta name="keywords" content="黑料社区官网二维码">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2433'/%3E%3Crect x='12' y='12' width='16' height='16' fill='%23e8b64c'/%3E%3Crect x='36' y='12' width='16' height='16' fill='%23e8b64c'/%3E%3Crect x='12' y='36' width='16' height='16' fill='%23e8b64c'/%3E%3Crect x='34' y='34' width='8' height='8' fill='%23e8b64c'/%3E%3Crect x='46' y='46' width='7' height='7' fill='%23e8b64c'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1b2433;
+  --ink-2:#3a4557;
+  --ink-3:#66718a;
+  --paper:#f6f3ec;
+  --card:#ffffff;
+  --brand:#1b2433;
+  --accent:#c8892b;
+  --accent-soft:#f3e3c4;
+  --line:#e2dccf;
+  --line-2:#cfc7b6;
+  --ok:#2f7a5b;
+  --warn:#a8442c;
+  --radius:14px;
+  --radius-s:8px;
+  --shadow:0 1px 2px rgba(27,36,51,.06),0 8px 24px rgba(27,36,51,.07);
+  --shadow-s:0 1px 2px rgba(27,36,51,.08);
+  --space:clamp(14px,2.2vw,24px);
+  --maxw:1180px;
+  --notice-h:38px;
+  --head-h:64px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--notice-h) + var(--head-h) + 12px)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--accent)}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 12px}
+ul,ol{margin:0;padding:0;list-style:none}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+/* ---------- 吸顶组 ---------- */
+.stick-wrap{position:sticky;top:0;z-index:60}
+.notice{
+  background:var(--brand);color:#f2ede2;font-size:13px;
+  height:var(--notice-h);display:flex;align-items:center;
+}
+.notice .in{
+  max-width:var(--maxw);margin:0 auto;padding:0 var(--space);
+  width:100%;display:flex;align-items:center;gap:10px;overflow:hidden;white-space:nowrap;
+}
+.notice .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+.notice b{color:#fff;font-weight:600}
+.notice .more{margin-left:auto;color:var(--accent-soft);font-size:12px;flex:none}
+.notice .more:hover{color:#fff}
+@media(max-width:640px){.notice .hide-m{display:none}}
+
+header.site{
+  background:rgba(246,243,236,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  height:var(--head-h);
+}
+.head-in{
+  max-width:var(--maxw);margin:0 auto;padding:0 var(--space);height:100%;
+  display:flex;align-items:center;gap:18px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:32px;height:32px;flex:none}
+.brand .txt{font-size:17px;font-weight:700;letter-spacing:.5px;line-height:1.1}
+.brand .txt small{display:block;font-size:10px;font-weight:500;color:var(--ink-3);letter-spacing:1.4px}
+nav.top{display:flex;gap:4px;margin-left:8px;flex-wrap:wrap}
+nav.top a{
+  font-size:14px;padding:6px 10px;border-radius:var(--radius-s);color:var(--ink-2);
+  transition:background .15s,color .15s;
+}
+nav.top a:hover,nav.top a.on{background:#eae4d7;color:var(--ink)}
+
+.head-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+.search{position:relative;display:flex;align-items:center}
+.search input{
+  width:190px;height:34px;border:1px solid var(--line-2);background:#fff;
+  border-radius:999px;padding:0 34px 0 14px;font-size:13px;color:var(--ink);
+}
+.search input::placeholder{color:#9aa1ae}
+.search button{
+  position:absolute;right:4px;width:26px;height:26px;border-radius:50%;border:0;
+  background:var(--brand);color:#fff;display:grid;place-items:center;padding:0;
+}
+.search button svg{width:13px;height:13px}
+.search .out{
+  position:absolute;top:40px;right:0;width:300px;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-s);box-shadow:var(--shadow);padding:6px;display:none;max-height:300px;overflow:auto;z-index:80;
+}
+.search .out.show{display:block}
+.search .out a{display:block;padding:7px 10px;border-radius:6px;font-size:13px}
+.search .out a:hover{background:var(--accent-soft)}
+.search .out .empty{font-size:13px;color:var(--ink-3);padding:10px}
+.cta-btn{
+  height:34px;padding:0 16px;border-radius:999px;border:0;background:var(--accent);color:#fff;
+  font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:6px;flex:none;
+}
+.cta-btn:hover{background:#b07723;color:#fff}
+.menu-btn{display:none;width:38px;height:38px;border:1px solid var(--line-2);background:#fff;border-radius:8px;align-items:center;justify-content:center}
+.menu-btn svg{width:18px;height:18px}
+@media(max-width:960px){
+  nav.top{
+    position:absolute;left:0;right:0;top:calc(var(--notice-h) + var(--head-h));
+    background:#fff;border-bottom:1px solid var(--line);flex-direction:column;padding:8px;gap:2px;
+    display:none;box-shadow:var(--shadow);margin:0;
+  }
+  nav.top.open{display:flex}
+  nav.top a{padding:10px 12px}
+  .menu-btn{display:inline-flex}
+  .search input{width:140px}
+}
+@media(max-width:560px){
+  .search{display:none}
+  .brand .txt small{display:none}
+}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  max-width:var(--maxw);margin:0 auto;padding:clamp(26px,5vw,56px) var(--space) clamp(20px,4vw,40px);
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(20px,4vw,52px);align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:1.6px;
+  color:var(--ink-3);text-transform:uppercase;margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--accent)}
+.hero h1{font-size:clamp(28px,4.6vw,46px);letter-spacing:-.5px;margin-bottom:16px}
+.hero .lead{font-size:clamp(15px,1.6vw,17px);color:var(--ink-2);max-width:36em;margin-bottom:22px}
+.hero .lead b{color:var(--ink);font-weight:600}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.btn-primary,.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 22px;border-radius:999px;
+  font-size:14px;font-weight:600;transition:transform .15s,background .15s;
+}
+.btn-primary{background:var(--brand);color:#f4efe4}
+.btn-primary:hover{background:#2a3549;color:#fff;transform:translateY(-2px)}
+.btn-ghost{background:transparent;border:1px solid var(--line-2);color:var(--ink-2)}
+.btn-ghost:hover{background:#fff;color:var(--ink);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:clamp(16px,3vw,36px);flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+.hero-stats .s b{display:block;font-size:22px;letter-spacing:-.3px}
+.hero-stats .s span{font-size:12px;color:var(--ink-3)}
+
+/* 首屏视觉：二维码扫描卡 */
+.hero-vis{position:relative;display:flex;justify-content:center}
+.scan-card{
+  position:relative;width:min(320px,100%);background:#fff;border:1px solid var(--line);
+  border-radius:22px;box-shadow:var(--shadow);padding:22px 22px 18px;
+}
+.scan-card .qr{
+  position:relative;aspect-ratio:1;border-radius:12px;background:var(--brand);
+  display:grid;grid-template-columns:repeat(9,1fr);grid-template-rows:repeat(9,1fr);gap:3px;padding:12px;overflow:hidden;
+}
+.scan-card .qr i{background:#f0e9da;border-radius:1.5px;opacity:.12}
+.scan-card .qr i.on{opacity:1;background:var(--accent-soft)}
+.scan-card .qr i.finder{background:var(--accent);opacity:1}
+.scan-card .scanline{
+  position:absolute;left:12px;right:12px;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);
+  top:14%;animation:scan 3.6s ease-in-out infinite;border-radius:2px;
+}
+@keyframes scan{0%,100%{top:12%}50%{top:86%}}
+.scan-card .meta{display:flex;align-items:center;justify-content:space-between;margin-top:14px;font-size:12px;color:var(--ink-3)}
+.scan-card .meta b{color:var(--ok);font-weight:600;display:inline-flex;align-items:center;gap:5px}
+.scan-card .meta b::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ok)}
+.scan-card .cap{font-size:12px;color:var(--ink-3);margin-top:10px;border-top:1px dashed var(--line);padding-top:10px}
+.badge-float{
+  position:absolute;right:-6px;top:-14px;background:var(--accent);color:#fff;font-size:11px;
+  padding:4px 10px;border-radius:999px;letter-spacing:.5px;box-shadow:var(--shadow-s);
+}
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr}
+  .hero-vis{order:2;margin-top:6px}
+}
+
+/* ---------- 布局 ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--space)}
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:clamp(20px,3vw,38px);
+  padding-bottom:56px;align-items:start;
+}
+.side{position:sticky;top:calc(var(--notice-h) + var(--head-h) + 16px);display:flex;flex-direction:column;gap:16px}
+@media(max-width:960px){
+  .layout{grid-template-columns:1fr}
+  .side{position:static;order:2}
+}
+@media(max-width:960px){
+  .main{order:1}
+}
+
+/* ---------- 板块通用 ---------- */
+.sec{margin-bottom:clamp(26px,3.6vw,40px);scroll-margin-top:calc(var(--notice-h) + var(--head-h) + 16px)}
+.sec-head{display:flex;align-items:flex-end;gap:14px;margin-bottom:16px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(20px,2.4vw,24px);letter-spacing:-.2px}
+.sec-head .kicker{font-size:12px;color:var(--accent);letter-spacing:1.4px;font-weight:600;text-transform:uppercase;padding-bottom:3px}
+.sec-head .sub{font-size:13px;color:var(--ink-3);margin-left:auto}
+@media(max-width:600px){.sec-head .sub{margin-left:0;width:100%}}
+.sec-note{font-size:13px;color:var(--ink-3);margin:-6px 0 14px}
+
+/* 概览：非对称组合 */
+.overview{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ov-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;
+  display:flex;flex-direction:column;gap:6px;transition:transform .18s,box-shadow .18s;
+}
+.ov-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.ov-card.big{grid-column:span 2;grid-row:span 2;padding:20px;background:linear-gradient(160deg,#fff, #fbf6ea)}
+.ov-card .num{font-size:26px;font-weight:700;letter-spacing:-.5px}
+.ov-card .num small{font-size:13px;font-weight:500;color:var(--ink-3);margin-left:3px}
+.ov-card h3{font-size:14px}
+.ov-card p{font-size:13px;color:var(--ink-3);margin:0}
+.ov-card.big h3{font-size:17px}
+.ov-card.big p{font-size:14px;color:var(--ink-2)}
+@media(max-width:760px){
+  .overview{grid-template-columns:repeat(2,1fr)}
+  .ov-card.big{grid-column:span 2;grid-row:auto}
+}
+
+/* 精选：网格卡片 */
+.picks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pick{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s;
+}
+.pick:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.pick .ph{aspect-ratio:16/10;overflow:hidden;background:#e9e3d6}
+.pick .ph img{width:100%;height:100%;object-fit:cover}
+.pick .bd{padding:14px 15px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pick .tag{font-size:11px;color:var(--accent);letter-spacing:.6px;font-weight:600}
+.pick h3{font-size:15px;line-height:1.5}
+.pick p{font-size:13px;color:var(--ink-3);margin:0;flex:1}
+.pick .foot{font-size:12px;color:var(--ink-3);display:flex;gap:10px;border-top:1px dashed var(--line);padding-top:9px}
+@media(max-width:860px){.picks{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.picks{grid-template-columns:1fr}}
+
+/* 最新更新：紧凑列表 + 时间线 */
+.updates{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.upd{display:grid;grid-template-columns:76px 1fr auto;gap:14px;padding:13px 18px;border-bottom:1px solid var(--line);align-items:start;font-size:14px}
+.upd:last-child{border-bottom:0}
+.upd time{font-size:12px;color:var(--ink-3);padding-top:3px;font-variant-numeric:tabular-nums}
+.upd .t b{font-weight:600}
+.upd .t span{display:block;font-size:13px;color:var(--ink-3);margin-top:2px}
+.upd .st{
+  font-size:11px;padding:2px 8px;border-radius:999px;white-space:nowrap;margin-top:3px;
+  background:#eef1ec;color:var(--ok);border:1px solid #d7e2d9;
+}
+.upd .st.w{background:#fbeee9;color:var(--warn);border-color:#f0d6cd}
+@media(max-width:560px){.upd{grid-template-columns:1fr auto;gap:4px 10px}.upd time{grid-column:1/-1;padding-top:0}}
+
+/* 分类入口：标签索引 */
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag-i{
+  display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
+  border-radius:999px;padding:8px 16px;font-size:14px;transition:border-color .15s,background .15s,transform .15s;
+}
+.tag-i:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateY(-2px)}
+.tag-i .c{font-size:11px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+
+/* 深度解析 */
+.article{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(18px,3vw,34px);
+}
+.article .leadp{font-size:16px;color:var(--ink-2);border-left:3px solid var(--accent);padding-left:14px;margin-bottom:22px}
+.article h3{font-size:18px;margin:24px 0 10px;padding-top:6px}
+.article h3:first-of-type{margin-top:12px}
+.article h3 .n{color:var(--accent);font-size:14px;margin-right:8px;font-variant-numeric:tabular-nums}
+.article p{color:var(--ink-2);font-size:15px}
+.article strong{color:var(--ink)}
+.checkbox{border:1px solid var(--line);border-radius:var(--radius-s);overflow:hidden;margin:16px 0 6px}
+.chk{display:grid;grid-template-columns:24px 1fr auto;gap:10px;padding:10px 14px;font-size:13.5px;align-items:center;border-bottom:1px solid var(--line)}
+.chk:last-child{border-bottom:0}
+.chk .ck{width:18px;height:18px;border-radius:4px;background:var(--ok);color:#fff;display:grid;place-items:center;font-size:11px}
+.chk .ck.no{background:var(--warn)}
+.chk .val{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.quote{
+  background:#faf7f0;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px;
+  padding:14px 18px;font-size:14px;color:var(--ink-2);margin:16px 0;
+}
+.quote b{color:var(--ink)}
+
+/* 体验指南：编号步骤 */
+.steps{counter-reset:st;display:grid;gap:12px}
+.step{
+  counter-increment:st;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px 14px 58px;position:relative;
+}
+.step::before{
+  content:counter(st,decimal-leading-zero);position:absolute;left:16px;top:14px;
+  width:28px;height:28px;border-radius:8px;background:var(--brand);color:#f3e4c6;
+  display:grid;place-items:center;font-size:12px;font-weight:700;
+}
+.step h3{font-size:15px;margin-bottom:4px}
+.step p{font-size:13.5px;color:var(--ink-3);margin:0}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+.compare > div{padding:16px 18px}
+.compare .head{padding:10px 18px;font-size:12px;letter-spacing:1.2px;color:var(--ink-3);border-bottom:1px solid var(--line);background:#faf7f0}
+.compare .col-a{border-right:1px solid var(--line)}
+.compare h3{font-size:15px;margin-bottom:8px}
+.compare ul{display:grid;gap:7px}
+.compare li{font-size:13.5px;color:var(--ink-2);display:flex;gap:8px}
+.compare li::before{content:"·";color:var(--accent);font-weight:700}
+@media(max-width:640px){.compare{grid-template-columns:1fr}.compare .col-a{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* 榜单 */
+.rank{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.rank li{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line);font-size:14px}
+.rank li:last-child{border-bottom:0}
+.rank .idx{font-size:18px;font-weight:700;color:var(--line-2);font-variant-numeric:tabular-nums}
+.rank li:nth-child(-n+3) .idx{color:var(--accent)}
+.rank .nm b{font-weight:600}
+.rank .nm span{display:block;font-size:12px;color:var(--ink-3)}
+.rank .sc{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+
+/* FAQ */
+.faq{display:grid;gap:10px}
+details.f{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-s);overflow:hidden}
+details.f summary{
+  padding:14px 18px;font-weight:600;font-size:14.5px;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+details.f summary::-webkit-details-marker{display:none}
+details.f summary::after{content:"+";color:var(--accent);font-weight:700;font-size:18px;flex:none}
+details.f[open] summary::after{content:"–"}
+details.f .a{padding:0 18px 15px;font-size:13.5px;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:12px}
+
+/* 评论 */
+.comments{display:grid;gap:12px}
+.cm{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;
+}
+.cm .who{display:flex;align-items:center;gap:10px;margin-bottom:7px}
+.cm .av{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff;flex:none}
+.cm .nm{font-size:13.5px;font-weight:600}
+.cm .tm{font-size:11.5px;color:var(--ink-3);margin-left:auto;font-variant-numeric:tabular-nums}
+.cm p{font-size:13.5px;color:var(--ink-2);margin:0}
+.cm .ref{font-size:12px;color:var(--accent);margin-top:6px}
+.cm.mid{border-left:3px solid var(--line-2)}
+
+/* 相关资讯 */
+.news{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.news a{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-s);padding:14px 16px;
+  transition:transform .15s,border-color .15s;
+}
+.news a:hover{transform:translateY(-2px);border-color:var(--accent)}
+.news .src{font-size:11.5px;color:var(--ink-3);display:flex;gap:8px;margin-bottom:5px}
+.news h3{font-size:14px;line-height:1.55}
+@media(max-width:640px){.news{grid-template-columns:1fr}}
+
+/* 相关推荐 */
+.recs{display:flex;flex-wrap:wrap;gap:9px}
+.recs a{
+  font-size:13px;background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:999px;
+  color:var(--ink-2);transition:background .15s,border-color .15s;
+}
+.recs a:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+.recs a::before{content:"#";color:var(--accent);margin-right:4px;font-weight:700}
+
+/* 侧栏组件 */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.panel h3{font-size:14px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.panel h3::before{content:"";width:3px;height:14px;background:var(--accent);border-radius:2px}
+.sidenav{display:grid;gap:2px}
+.sidenav a{
+  font-size:13.5px;padding:7px 10px;border-radius:6px;color:var(--ink-2);
+  display:flex;justify-content:space-between;gap:8px;transition:background .15s;
+}
+.sidenav a:hover{background:#f3eee3}
+.sidenav a.active{background:var(--brand);color:#f4e9d6}
+.sidenav a span{font-size:11px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.sidenav a.active span{color:#c9bda4}
+.side-list{display:grid;gap:10px}
+.side-list li{font-size:13px;line-height:1.6;color:var(--ink-2);display:flex;gap:8px}
+.side-list li i{font-style:normal;color:var(--accent);font-variant-numeric:tabular-nums;flex:none;font-size:12px;padding-top:2px}
+.side-tip{font-size:12px;color:var(--ink-3);line-height:1.7}
+
+/* 页脚 */
+footer.site{background:var(--brand);color:#c9cfdb;padding:clamp(30px,5vw,52px) 0 24px;margin-top:20px}
+.foot-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--space)}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:clamp(18px,3vw,40px);padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.foot-brand svg{width:30px;height:30px}
+.foot-brand b{color:#fff;font-size:16px}
+footer .desc{font-size:13px;line-height:1.8;color:#a9b2c3;max-width:26em}
+.foot-col h4{font-size:13px;color:#fff;margin-bottom:12px;letter-spacing:.5px}
+.foot-col a{display:block;font-size:13px;color:#a9b2c3;padding:3px 0}
+.foot-col a:hover{color:var(--accent-soft)}
+.foot-bottom{padding-top:18px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:#8b95a8}
+.foot-bottom .meta-lines{display:grid;gap:4px}
+@media(max-width:820px){.foot-top{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.foot-top{grid-template-columns:1fr}}
+
+/* 回到顶部 */
+#toTop{
+  position:fixed;right:18px;bottom:18px;width:42px;height:42px;border-radius:50%;border:0;
+  background:var(--brand);color:#f4e9d6;display:grid;place-items:center;box-shadow:var(--shadow);
+  opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s,transform .2s;z-index:70;
+}
+#toTop.show{opacity:1;pointer-events:auto;transform:none}
+#toTop svg{width:18px;height:18px}
+@media(max-width:560px){#toTop{bottom:78px;right:14px;width:38px;height:38px}}
+
+/* 底部移动操作区 */
+.mbar{display:none}
+@media(max-width:560px){
+  .mbar{
+    display:flex;position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);
+    z-index:65;padding:6px 8px;gap:8px;box-shadow:0 -2px 10px rgba(27,36,51,.06);
+  }
+  .mbar a{
+    flex:1;text-align:center;font-size:12px;padding:7px 0;border-radius:8px;color:var(--ink-2);font-weight:600;
+  }
+  .mbar a.p{background:var(--brand);color:#f4e9d6}
+  body{padding-bottom:52px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="stick-wrap">
+  <div class="notice" id="noticebar">
+    <div class="in">
+      <span class="dot"></span>
+      <span><b>黑料社区官网二维码</b> 入口清单 11 月 6 日更新：新增 2 条、下架 1 条仿冒码</span>
+      <span class="hide-m">｜核验批次 HC-1106</span>
+      <a class="more" href="/#updates">查看变更 →</a>
+    </div>
+  </div>
+
+  <header class="site">
+    <div class="head-in">
+      <a class="brand" href="/#top" aria-label="返回首页">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1b2433"/>
+          <rect x="12" y="12" width="16" height="16" fill="#e8b64c"/>
+          <rect x="36" y="12" width="16" height="16" fill="#e8b64c"/>
+          <rect x="12" y="36" width="16" height="16" fill="#e8b64c"/>
+          <rect x="34" y="34" width="8" height="8" fill="#e8b64c"/>
+          <rect x="46" y="46" width="7" height="7" fill="#e8b64c"/>
+        </svg>
+        <span class="txt">黑料社区官网二维码<small>ENTRY VERIFY</small></span>
+      </a>
+
+      <nav class="top" id="topnav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选推荐</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#cats">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">用户评论</a>
+      </nav>
+
+      <div class="head-right">
+        <div class="search">
+          <input id="q" type="search" placeholder="搜入口、仿冒特征、日期" aria-label="站内搜索">
+          <button id="qbtn" type="button" aria-label="搜索">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2"/></svg>
+          </button>
+          <div class="out" id="qout" role="listbox" aria-label="搜索结果"></div>
+        </div>
+        <button class="menu-btn" id="menubtn" type="button" aria-label="展开导航菜单" aria-expanded="false" aria-controls="topnav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <a class="cta-btn" href="/#guide">核验入口</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroH1">
+    <div>
+      <div class="eyebrow">入口核验 · 防伪清单</div>
+      <h1 id="heroH1">黑料社区官网二维码</h1>
+      <p class="lead">把一张二维码当成“门牌”来查，比直接扫码可靠。这里按 <b>码面结构、跳转域名、页面指纹</b> 三层做核验，记录 11 月 1 日至 11 月 8 日期间入口变更，附仿冒码的 6 个常见特征与逐条可对照的检查项。</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="/#guide">开始核验步骤 →</a>
+        <a class="btn-ghost" href="/#updates">看 11 月变更</a>
+      </div>
+      <div class="hero-stats">
+        <div class="s"><b>12</b><span>已核验入口</span></div>
+        <div class="s"><b>6</b><span>仿冒特征</span></div>
+        <div class="s"><b>3</b><span>核验层级</span></div>
+        <div class="s"><b>11-06</b><span>最近批次</span></div>
+      </div>
+    </div>
+
+    <div class="hero-vis" aria-hidden="true">
+      <div class="scan-card">
+        <span class="badge-float">码面在检</span>
+        <div class="qr">
+          <i class="finder"></i><i class="on"></i><i></i><i class="on"></i><i></i><i class="finder"></i><i class="on"></i><i></i><i class="finder"></i>
+          <i class="on"></i><i></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i></i>
+          <i></i><i class="on"></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i class="on"></i>
+          <i class="on"></i><i></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i></i><i class="on"></i><i></i>
+          <i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i class="on"></i><i></i><i class="on"></i>
+          <i class="on"></i><i></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i></i><i></i>
+          <i class="finder"></i><i></i><i class="on"></i><i></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i></i>
+          <i></i><i class="on"></i><i></i><i class="on"></i><i></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i>
+          <i class="on"></i><i></i><i class="on"></i><i></i><i class="finder"></i><i></i><i class="on"></i><i></i><i class="on"></i>
+          <span class="scanline"></span>
+        </div>
+        <div class="meta"><span>样本 HC-1106-02</span><b>结构正常</b></div>
+        <div class="cap">校验位与三处定位角完整，跳转域名与登记记录一致。</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="layout">
+
+      <!-- 主内容 -->
+      <div class="main">
+
+        <!-- 1 领域概览 -->
+        <section class="sec" id="overview">
+          <div class="sec-head">
+            <span class="kicker">Overview</span>
+            <h2>入口二维码到底在核什么</h2>
+            <span class="sub">2026-11-08 整理</span>
+          </div>
+          <p class="sec-note">围绕“黑料社区官网二维码”形成的讨论，多数集中在入口真假、跳转域名与码面样式三项。以下四项是可独立核对的基础事实。</p>
+          <div class="overview">
+            <div class="ov-card big">
+              <span class="num">3<small>层</small></span>
+              <h3>码面结构 / 跳转域名 / 页面指纹</h3>
+              <p>码面看定位角与校验位是否被贴纸覆盖；跳转域名与登记记录比对；页面指纹看栏目命名、导航顺序与更新日期。三层里任意一层对不上，就不建议继续操作。11 月 4 日批次里，有 2 条样本卡在第二层。</p>
+            </div>
+            <div class="ov-card">
+              <span class="num">12<small>条</small></span>
+              <h3>已核验入口</h3>
+              <p>11 月 1 日至 6 日累计登记。</p>
+            </div>
+            <div class="ov-card">
+              <span class="num">6<small>项</small></span>
+              <h3>仿冒特征</h3>
+              <p>从 19 条举报样本中归纳。</p>
+            </div>
+            <div class="ov-card">
+              <span class="num">48<small>小时</small></span>
+              <h3>复核周期</h3>
+              <p>入口变更后两天内重查。</p>
+            </div>
+            <div class="ov-card">
+              <span class="num">19<small>条</small></span>
+              <h3>举报样本</h3>
+              <p>10 月 26 日至 11 月 6 日收。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2 精选推荐 -->
+        <section class="sec" id="picks">
+          <div class="sec-head">
+            <span class="kicker">Picks</span>
+            <h2>精选内容推荐</h2>
+            <span class="sub">按核验价值排序</span>
+          </div>
+          <div class="picks">
+            <article class="pick">
+              <div class="ph"><img src="https://picsum.photos/seed/hc-entry-qr001/640/400" width="640" height="400" loading="lazy" alt="手机对准二维码进行扫码核验的画面" style="object-fit:cover"></div>
+              <div class="bd">
+                <span class="tag">扫码前</span>
+                <h3>二维码贴纸覆盖的三种典型做法</h3>
+                <p>整张覆盖、只贴定位角、透明薄膜叠印。第二种最难看出，靠拍侧光照边缘。</p>
+                <div class="foot"><span>11-05</span><span>核验笔记</span></div>
+              </div>
+            </article>
+            <article class="pick">
+              <div class="ph"><img src="https://picsum.photos/seed/hc-domain002/640/400" width="640" height="400" loading="lazy" alt="浏览器地址栏域名比对截图示意" style="object-fit:cover"></div>
+              <div class="bd">
+                <span class="tag">跳转域名</span>
+                <h3>二级域名差一个字母的识别办法</h3>
+                <p>把域名按标点拆成三段逐段读，比整串扫一眼更有效。11 月样本里 5 条属此类。</p>
+                <div class="foot"><span>11-04</span><span>域名核对</span></div>
+              </div>
+            </article>
+            <article class="pick">
+              <div class="ph"><img src="https://picsum.photos/seed/hc-page003/640/400" width="640" height="400" loading="lazy" alt="网页栏目导航顺序对照示意" style="object-fit:cover"></div>
+              <div class="bd">
+                <span class="tag">页面指纹</span>
+                <h3>导航顺序是最好用的页面指纹</h3>
+                <p>仿冒页常改栏目名或换顺序。10 月 29 日一份样本把第三个栏目提前了两位。</p>
+                <div class="foot"><span>11-02</span><span>指纹比对</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 3 最新更新 -->
+        <section class="sec" id="updates">
+          <div class="sec-head">
+            <span class="kicker">Updates</span>
+            <h2>最新更新</h2>
+            <span class="sub">批次 HC-1106</span>
+          </div>
+          <div class="updates">
+            <div class="upd">
+              <time>今天 09:20</time>
+              <div class="t"><b>新增样本 HC-1106-01</b><span>码面校验位完整，跳转域名与登记记录一致，页面指纹中导航七项顺序全对。</span></div>
+              <span class="st">通过</span>
+            </div>
+            <div class="upd">
+              <time>昨天 17:05</time>
+              <div class="t"><b>下架仿冒码一条</b><span>域名尾部多一个连字符，页面把“常见问题”写成“疑问解答”，11 月 3 日已从清单移除。</span></div>
+              <span class="st w">已下架</span>
+            </div>
+            <div class="upd">
+              <time>11-05 14:40</time>
+              <div class="t"><b>新增样本 HC-1105-04</b><span>码面没问题，但跳转页加载后栏目顺序与登记不符，暂列观察。</span></div>
+              <span class="st w">观察</span>
+            </div>
+            <div class="upd">
+              <time>11-04 10:12</time>
+              <div class="t"><b>复核 4 条旧样本</b><span>其中 3 条仍有效，1 条页面更新日期停留在 10 月 18 日，标记为待重查。</span></div>
+              <span class="st">完成</span>
+            </div>
+            <div class="upd">
+              <time>11-02 16:30</time>
+              <div class="t"><b>仿冒特征补第 6 条</b><span>新增“扫码后先弹权限请求”这一项，来自 10 月 30 日两条举报。</span></div>
+              <span class="st">完成</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4 分类入口 -->
+        <section class="sec" id="cats">
+          <div class="sec-head">
+            <span class="kicker">Index</span>
+            <h2>分类入口</h2>
+            <span class="sub">12 个频道</span>
+          </div>
+          <div class="tags">
+            <a class="tag-i" href="/#deep">二维码码面结构 <span class="c">8</span></a>
+            <a class="tag-i" href="/#guide">扫码前检查清单 <span class="c">6</span></a>
+            <a class="tag-i" href="/#deep">跳转域名比对 <span class="c">9</span></a>
+            <a class="tag-i" href="/#updates">入口变更记录 <span class="c">14</span></a>
+            <a class="tag-i" href="/#compare">仿冒码特征 <span class="c">6</span></a>
+            <a class="tag-i" href="/#faq">页面指纹核对 <span class="c">5</span></a>
+            <a class="tag-i" href="/#rank">入口可信度分层 <span class="c">3</span></a>
+            <a class="tag-i" href="/#comments">用户实测反馈 <span class="c">11</span></a>
+            <a class="tag-i" href="/#news">行业入口资讯 <span class="c">7</span></a>
+            <a class="tag-i" href="/#recs">相关推荐标签 <span class="c">10</span></a>
+            <a class="tag-i" href="/#faq">截图取证方法 <span class="c">4</span></a>
+            <a class="tag-i" href="/#guide">移动端扫码差异 <span class="c">3</span></a>
+          </div>
+        </section>
+
+        <!-- 5 深度解析 -->
+        <section class="sec" id="deep">
+          <div class="sec-head">
+            <span class="kicker">Analysis</span>
+            <h2>深度解析</h2>
+            <span class="sub">全页唯一主体阅读区</span>
+          </div>
+          <article class="article">
+            <p class="leadp">一个可被反驳的判断：<strong>入口判断的可靠性主要取决于跳转域名，而不是码面本身。</strong>码面只能证明“这张纸有没有被动过”，域名才决定“你最终落在哪里”。多数误判恰恰是因为只做了第一层。</p>
+
+            <h3><span class="n">01</span>码面能查出什么，查不出什么</h3>
+            <p>二维码的定位角由三个回字形方块组成，位于左上、右上、左下。真码的定位角边缘锐利，黑白色差大；贴纸覆盖的样本在侧光下能看到约 0.1 毫米的薄膜边缘。10 月 28 日那份样本，正面看不出问题，侧光拍三张后才在第 2 张里看到边缘反光。</p>
+            <p>但码面完好不等于入口可信。二维码只是把一段字符串编码成图形，任何人都能生成外观相同的码。<strong>码面检查的作用是排除“物理篡改”，它无法证明内容指向哪里。</strong>把码面当成唯一依据，等于只验了信封没验收件人。</p>
+
+            <h3><span class="n">02</span>域名比对的可操作拆法</h3>
+            <p>把域名按点号和连字符拆成独立片段，逐段念一遍。11 月 3 日下架的样本，登记记录为四段结构，仿冒品在第二段末尾多了一个连字符，整串读起来几乎一样。逐段念的时候，多出来的停顿会暴露它。</p>
+            <div class="checkbox" role="table" aria-label="域名比对检查项">
+              <div class="chk" role="row"><span class="ck" aria-hidden="true">✓</span><span>域名段数与登记记录一致</span><span class="val">11-06 通过</span></div>
+              <div class="chk" role="row"><span class="ck" aria-hidden="true">✓</span><span>无多余连字符、无数字替换字母</span><span class="val">11-06 通过</span></div>
+              <div class="chk" role="row"><span class="ck no" aria-hidden="true">×</span><span>跳转后地址栏域名与扫码结果显示一致</span><span class="val">11-05 失败</span></div>
+              <div class="chk" role="row"><span class="ck" aria-hidden="true">✓</span><span>页面未先弹权限请求</span><span class="val">11-04 通过</span></div>
+            </div>
+            <p>第三项失败的那条样本，原因很具体：扫码结果指向 A 域名，页面加载完成前发生一次重定向，地址栏变成 B 域名。移动端浏览器地址栏在滚动时还会收起，更容易错过。<strong>建议在页面完全静止后再看一次地址栏。</strong></p>
+
+            <h3><span class="n">03</span>页面指纹：导航顺序与更新日期</h3>
+            <p>栏目导航的顺序是被仿冒时最容易改、也最容易核的部分。登记记录里七个栏目有固定次序，仿冒页常常只改其中一两个名称，比如把“常见问题”换成“疑问解答”，或把第三个栏目提前。10 月 29 日那份样本就是后者，其余内容看不出差别。</p>
+            <div class="quote">
+              <b>可核对的中段：</b>10 月 26 日至 11 月 6 日的 19 条举报样本中，12 条能通过码面检查，只有 7 条能通过域名检查，能同时通过三项的为 4 条。<b>码面通过率高、域名通过率低</b>，这个差距本身就说明检查重心该往哪放。
+            </div>
+            <p>更新日期是另一个低成本指纹。真入口的更新记录会随批次推进，仿冒页常停留在某个固定日期不再变动。11 月 4 日复核时，有一条样本的页面更新日期停在 10 月 18 日，三周未动，与登记记录里每周至少一次的节奏对不上。</p>
+
+            <h3><span class="n">04</span>这套判断在什么情况下会失效</h3>
+            <p>域名比对依赖登记记录准确。如果登记记录本身滞后，比对就会误伤。11 月 1 日到 2 日之间有一次入口正常迁移，登记记录晚了两天才同步，期间两条真入口被误标为观察。<strong>所以观察标记不等于有问题，需要结合时间差看。</strong></p>
+            <p>另一处失效点是截图。截图能保留域名和导航，但保留不了重定向过程。要记录重定向，得在扫码后立刻看地址栏，或者用系统自带的录屏。这不是猜测，是 11 月 4 日那次复核里两条样本无法定性的直接原因。</p>
+          </article>
+        </section>
+
+        <!-- 6 体验指南 -->
+        <section class="sec" id="guide">
+          <div class="sec-head">
+            <span class="kicker">Guide</span>
+            <h2>体验指南</h2>
+            <span class="sub">五步核验流程</span>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <h3>先看码面再扫码</h3>
+              <p>把手机屏幕调亮当侧光源，斜 30 度照二维码边缘。有薄膜反光或定位角不完整，先停。</p>
+            </div>
+            <div class="step">
+              <h3>扫码后不急着点</h3>
+              <p>多数系统会先显示识别结果。把这串结果和登记记录里的域名逐段比对，对不上就不点。</p>
+            </div>
+            <div class="step">
+              <h3>等页面完全加载再看地址栏</h3>
+              <p>重定向常发生在加载过程中。手指轻点屏幕让地址栏重新展开，确认最终停留的域名。</p>
+            </div>
+            <div class="step">
+              <h3>数一遍导航顺序</h3>
+              <p>七个栏目从头数到尾，看名称和次序是否与登记一致。改一个名称也算不一致。</p>
+            </div>
+            <div class="step">
+              <h3>截图留存，标时间</h3>
+              <p>截地址栏、导航、页面更新日期三处，文件名带上日期。需要复核时这是最直接的证据。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7 对照面板 -->
+        <section class="sec" id="compare">
+          <div class="sec-head">
+            <span class="kicker">Compare</span>
+            <h2>真入口与仿冒码对照</h2>
+            <span class="sub">6 项特征</span>
+          </div>
+          <div class="compare">
+            <div class="head">核验项</div>
+            <div class="head" style="border-left:1px solid var(--line)">观察点</div>
+            <div class="col-a">
+              <h3>可核验入口</h3>
+              <ul>
+                <li>域名段数与登记记录一致，无多余符号</li>
+                <li>跳转过程无二次重定向</li>
+                <li>导航七项名称与次序固定</li>
+                <li>页面更新日期随批次推进</li>
+                <li>不先弹权限请求，直接进内容</li>
+                <li>码面定位角完整，侧光无薄膜边缘</li>
+              </ul>
+            </div>
+            <div>
+              <h3>需警惕的样本</h3>
+              <ul>
+                <li>域名多一个连字符或用数字替换字母</li>
+                <li>扫码后地址栏中途跳变</li>
+                <li>栏目被改名或次序提前</li>
+                <li>更新日期长期停在同一日</li>
+                <li>加载前先要求通知、定位等权限</li>
+                <li>码面有整张或局部贴纸覆盖痕迹</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8 榜单 -->
+        <section class="sec" id="rank">
+          <div class="sec-head">
+            <span class="kicker">Rank</span>
+            <h2>入口可信度分层</h2>
+            <span class="sub">按三项通过情况</span>
+          </div>
+          <ol class="rank">
+            <li>
+              <span class="idx">01</span>
+              <span class="nm"><b>三项全通过</b><span>码面、域名、指纹均与登记一致</span></span>
+              <span class="sc">4 条</span>
+            </li>
+            <li>
+              <span class="idx">02</span>
+              <span class="nm"><b>域名与指纹通过</b><span>码面存在轻微磨损，不影响识别</span></span>
+              <span class="sc">3 条</span>
+            </li>
+            <li>
+              <span class="idx">03</span>
+              <span class="nm"><b>仅码面通过</b><span>域名待比对，暂列观察</span></span>
+              <span class="sc">2 条</span>
+            </li>
+            <li>
+              <span class="idx">04</span>
+              <span class="nm"><b>仅域名通过</b><span>导航顺序有偏移，需人工复核</span></span>
+              <span class="sc">2 条</span>
+            </li>
+            <li>
+              <span class="idx">05</span>
+              <span class="nm"><b>已下架</b><span>域名不符或存在二次重定向</span></span>
+              <span class="sc">1 条</span>
+            </li>
+          </ol>
+        </section>
+
+        <!-- 9 FAQ -->
+        <section class="sec" id="faq">
+          <div class="sec-head">
+            <span class="kicker">FAQ</span>
+            <h2>常见问题</h2>
+            <span class="sub">7 个高频疑问</span>
+          </div>
+          <div class="faq">
+            <details class="f" open>
+              <summary>扫码后地址栏和识别结果不一样，是什么原因？</summary>
+              <div class="a">常见于页面加载过程中发生一次重定向。识别结果显示 A 域名，加载完成后变成 B 域名。11 月 5 日观察样本即有此项。判断方法是等页面静止、地址栏重新展开后再看一次，若两次不同，按不符处理。</div>
+            </details>
+            <details class="f">
+              <summary>二维码贴纸覆盖一定有问题吗？</summary>
+              <div class="a">不一定，但需要进一步核对。贴纸可能是线下投放时覆盖旧码，也可能是篡改。区分点是贴纸边缘是否与码面定位角重叠，重叠会改变识别结果。侧光拍照后比对识别出的字符串最直接。</div>
+            </details>
+            <details class="f">
+              <summary>导航顺序怎么数才算对？</summary>
+              <div class="a">登记记录里七个栏目从第一项到第七项有固定次序，名称逐字一致才算对。改一个字、换一个近义词、或把某一项提前两位，都记为不一致。10 月 29 日那份样本属于提前两位。</div>
+            </details>
+            <details class="f">
+              <summary>页面更新日期停在十天前要紧吗？</summary>
+              <div class="a">结合登记节奏看。当前节奏是每周至少一次更新，停十天意味着超过一个周期未动。这可能只是页面未刷新，也可能是不再维护。单独一项不足以定性，需与域名、导航一并判断。</div>
+            </details>
+            <details class="f">
+              <summary>手机上怎么看完整域名？</summary>
+              <div class="a">滚动页面时地址栏会自动收起。手指轻触屏幕顶部或向下轻扫，地址栏重新展开。部分浏览器显示的是简化域名，可点地址栏左侧的锁形或信息图标查看完整内容。</div>
+            </details>
+            <details class="f">
+              <summary>被标为“观察”的入口还能用吗？</summary>
+              <div class="a">观察标记只表示某一项待复核，不代表已确认不可信。11 月 1 日至 2 日的误标就是登记记录滞后造成。处理方式是等 48 小时复核窗口过去，再看最终结论。</div>
+            </details>
+            <details class="f">
+              <summary>截图要截哪几处才有复核价值？</summary>
+              <div class="a">三处：完整地址栏、栏目导航、页面更新日期。文件名带上日期，避免多张截图混淆。只截内容页没有域名，无法用于复核，这是 11 月 4 日两条样本无法定性的原因。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 10 用户评论 -->
+        <section class="sec" id="comments">
+          <div class="sec-head">
+            <span class="kicker">Comments</span>
+            <h2>用户评论</h2>
+            <span class="sub">11 条 · 选取 6 条</span>
+          </div>
+          <div class="comments">
+            <div class="cm">
+              <div class="who"><span class="av" style="background:#4a6fa5">林</span><span class="nm">林舟</span><span class="tm">今天 10:42</span></div>
+              <p>按步骤先侧光拍，果然在同一张码的第 2 张照片里看到薄膜边缘。之前一直只看正面的。</p>
+              <div class="ref">对应：码面贴纸覆盖的三种典型做法</div>
+            </div>
+            <div class="cm mid">
+              <div class="who"><span class="av" style="background:#8a6d3b">陈</span><span class="nm">陈小满</span><span class="tm">昨天 21:17</span></div>
+              <p>导航顺序这个办法好用，七个栏目数下来，第三项确实提前了。不过我觉得只数名称不够，位置更要紧。</p>
+              <div class="ref">对应：导航顺序是最好用的页面指纹</div>
+            </div>
+            <div class="cm">
+              <div class="who"><span class="av" style="background:#5a8a6a">周</span><span class="nm">周予安</span><span class="tm">11-06 15:03</span></div>
+              <p>11 月 1 日、2 日那两条被标观察的，后来不都恢复了吗。说明标记本身也会错，别太较真。</p>
+              <div class="ref">对应：入口可信度分层</div>
+            </div>
+            <div class="cm">
+              <div class="who"><span class="av" style="background:#a14a4a">吴</span><span class="nm">吴岸</span><span class="tm">11-05 19:48</span></div>
+              <p>域名那段拆开念的办法真有效。多一个连字符，整串看起来完全一样，念出来才听出停顿不对。</p>
+              <div class="ref">对应：二级域名差一个字母的识别办法</div>
+            </div>
+            <div class="cm mid">
+              <div class="who"><span class="av" style="background:#6b5a8a">赵</span><span class="nm">赵启明</span><span class="tm">11-04 11:26</span></div>
+              <p>截图那段说得对，我上次只截了内容页，后来想复核发现没录音域名。白截。</p>
+              <div class="ref">对应：截图取证方法</div>
+            </div>
+            <div class="cm">
+              <div class="who"><span class="av" style="background:#4a7a8a">何</span><span class="nm">何砚</span><span class="tm">11-03 08:55</span></div>
+              <p>页面指纹这说法听着玄，实际就是看导航和更新日期。改天有空我也整理一份自己的检查表。</p>
+              <div class="ref">对应：页面指纹：导航顺序与更新日期</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 11 相关资讯 -->
+        <section class="sec" id="news">
+          <div class="sec-head">
+            <span class="kicker">News</span>
+            <h2>相关资讯</h2>
+            <span class="sub">11 月 1 日至 7 日</span>
+          </div>
+          <div class="news">
+            <a href="/#deep">
+              <div class="src"><span>11-07</span><span>入口公告</span></div>
+              <h3>11 月入口清单同步一次，新增两条正式样本</h3>
+            </a>
+            <a href="/#compare">
+              <div class="src"><span>11-06</span><span>防伪记录</span></div>
+              <h3>仿冒特征补第 6 条：加载前先弹权限请求</h3>
+            </a>
+            <a href="/#updates">
+              <div class="src"><span>11-05</span><span>变更日志</span></div>
+              <h3>一条观察样本因地址栏跳转变更结论</h3>
+            </a>
+            <a href="/#guide">
+              <div class="src"><span>11-03</span><span>方法整理</span></div>
+              <h3>侧光拍码的三种角度，第二次最有参考价值</h3>
+            </a>
+            <a href="/#faq">
+              <div class="src"><span>11-02</span><span>答疑汇总</span></div>
+              <h3>移动端地址栏收起的应对方式汇总</h3>
+            </a>
+            <a href="/#rank">
+              <div class="src"><span>11-01</span><span>分层结果</span></div>
+              <h3>本月首批 12 条入口可信度分层公布</h3>
+            </a>
+          </div>
+        </section>
+
+        <!-- 12 相关推荐 -->
+        <section class="sec" id="recs">
+          <div class="sec-head">
+            <span class="kicker">More</span>
+            <h2>相关推荐</h2>
+          </div>
+          <div class="recs">
+            <a href="/#guide">扫码前检查清单</a>
+            <a href="/#deep">二维码码面结构</a>
+            <a href="/#compare">仿冒码特征对照</a>
+            <a href="/#faq">页面指纹核对</a>
+            <a href="/#updates">入口变更记录</a>
+            <a href="/#rank">入口可信度分层</a>
+            <a href="/#comments">用户实测反馈</a>
+            <a href="/#guide">移动端扫码差异</a>
+            <a href="/#faq">截图取证方法</a>
+            <a href="/#deep">跳转域名比对</a>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- 侧栏 -->
+      <aside class="side" aria-label="侧栏导航与补充信息">
+        <div class="panel">
+          <h3>栏目导航</h3>
+          <nav class="sidenav" id="sidenav">
+            <a href="/#overview">领域概览 <span>01</span></a>
+            <a href="/#picks">精选推荐 <span>02</span></a>
+            <a href="/#updates">最新更新 <span>03</span></a>
+            <a href="/#cats">分类入口 <span>04</span></a>
+            <a href="/#deep">深度解析 <span>05</span></a>
+            <a href="/#guide">体验指南 <span>06</span></a>
+            <a href="/#compare">真伪对照 <span>07</span></a>
+            <a href="/#rank">可信度分层 <span>08</span></a>
+            <a href="/#faq">常见问题 <span>09</span></a>
+            <a href="/#comments">用户评论 <span>10</span></a>
+            <a href="/#news">相关资讯 <span>11</span></a>
+            <a href="/#recs">相关推荐 <span>12</span></a>
+          </nav>
+        </div>
+
+        <div class="panel">
+          <h3>本周核验要点</h3>
+          <ul class="side-list">
+            <li><i>01</i><span>侧光拍码，第二次角度最易看出薄膜边缘</span></li>
+            <li><i>02</i><span>域名按点号拆段逐段念，多一个符号会露馅</span></li>
+            <li><i>03</i><span>页面静止后再看一次地址栏，排除重定向</span></li>
+            <li><i>04</i><span>截图保留地址栏、导航、更新日期三处</span></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>批次记录</h3>
+          <p class="side-tip">当前核验批次 HC-1106，覆盖 11 月 1 日至 6 日登记的 12 条入口。下一次同步计划在 11 月 10 日，届时会重查本次标为观察的 2 条样本。</p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#2a3549"/>
+            <rect x="12" y="12" width="16" height="16" fill="#e8b64c"/>
+            <rect x="36" y="12" width="16" height="16" fill="#e8b64c"/>
+            <rect x="12" y="36" width="16" height="16" fill="#e8b64c"/>
+            <rect x="34" y="34" width="8" height="8" fill="#e8b64c"/>
+            <rect x="46" y="46" width="7" height="7" fill="#e8b64c"/>
+          </svg>
+          <b>黑料社区官网二维码</b>
+        </div>
+        <p class="desc">按码面、域名、页面指纹三层核验入口，记录每次变更与观察结论，供扫码前后逐项对照。</p>
+      </div>
+      <div class="foot-col">
+        <h4>核验方法</h4>
+        <a href="/#guide">扫码前检查清单</a>
+        <a href="/#deep">二维码码面结构</a>
+        <a href="/#compare">仿冒码特征对照</a>
+        <a href="/#faq">页面指纹核对</a>
+      </div>
+      <div class="foot-col">
+        <h4>记录与分层</h4>
+        <a href="/#updates">入口变更记录</a>
+        <a href="/#rank">入口可信度分层</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#comments">用户实测反馈</a>
+      </div>
+      <div class="foot-col">
+        <h4>入口频道</h4>
+        <a href="/#cats">分类入口索引</a>
+        <a href="/#picks">精选内容推荐</a>
+        <a href="/#recs">相关推荐标签</a>
+        <a href="/#overview">领域概览</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="meta-lines">
+        <span>页面内容为示例数据，用于说明核验方法，不代表任何真实入口授权。</span>
+        <span>更新时间 2026-11-08，对应“最新更新”板块中今天 09:20 的新增样本记录。</span>
+      </div>
+      <span>© 2026 入口核验记录 · 示例站</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="mbar" aria-label="移动端快捷入口">
+  <a href="/#guide">核验步骤</a>
+  <a href="/#updates">最新更新</a>
+  <a class="p" href="/#faq">常见问题</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var menuBtn = document.getElementById('menubtn');
+  var topnav = document.getElementById('topnav');
+  if(menuBtn && topnav){
+    menuBtn.addEventListener('click', function(){
+      var open = topnav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', open ? '收起导航菜单' : '展开导航菜单');
+    });
+    topnav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        topnav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.setAttribute('aria-label','展开导航菜单');
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && topnav.classList.contains('open')){
+        topnav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.focus();
+      }
+    });
+  }
+
+  /* 搜索 */
+  var q = document.getElementById('q');
+  var qbtn = document.getElementById('qbtn');
+  var qout = document.getElementById('qout');
+  var data = [
+    {t:'二维码码面结构与定位角', u:'/#deep', k:'码面 定位角 侧光 贴纸'},
+    {t:'扫码前检查清单', u:'/#guide', k:'检查 扫码 步骤 清单'},
+    {t:'跳转域名比对方法', u:'/#deep', k:'域名 比对 连字符 重定向'},
+    {t:'入口变更记录 11 月批次', u:'/#updates', k:'更新 变更 批次 11月'},
+    {t:'仿冒码的六个特征', u:'/#compare', k:'仿冒 特征 对照 难点'},
+    {t:'页面指纹核对', u:'/#faq', k:'指纹 导航 顺序 更新日期'},
+    {t:'入口可信度分层', u:'/#rank', k:'分层 榜单 可信度 通过'},
+    {t:'用户实测反馈', u:'/#comments', k:'评论 实测 反馈 经验'},
+    {t:'截图取证方法', u:'/#faq', k:'截图 取证 地址栏 日期'},
+    {t:'移动端扫码差异', u:'/#guide', k:'移动 地址栏 收起 手机'},
+    {t:'相关资讯汇总', u:'/#news', k:'资讯 公告 11月'},
+    {t:'相关推荐标签', u:'/#recs', k:'推荐 标签 入口'}
+  ];
+
+  function render(list){
+    if(!list.length){
+      qout.innerHTML = '<div class="empty">没有匹配的条目。换个词试试，例如“域名”或“截图”。</div>';
+    }else{
+      qout.innerHTML = list.map(function(it){
+        return '<a href="'+it.u+'" role="option">'+it.t+'</a>';
+      }).join('');
+    }
+    qout.classList.add('show');
+  }
+
+  function search(){
+    var v = (q.value || '').trim().toLowerCase();
+    if(!v){
+      qout.classList.remove('show');
+      qout.innerHTML = '';
+      return;
+    }
+    var list = data.filter(function(it){
+      return (it.t + ' ' + it.k).toLowerCase().indexOf(v) > -1;
+    });
+    render(list);
+  }
+
+  if(q && qbtn && qout){
+    qbtn.addEventListener('click', search);
+    q.addEventListener('input', search);
+    q.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); search(); }
+      if(e.key === 'Escape'){ qout.classList.remove('show'); }
+    });
+    qout.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){ qout.classList.remove('show'); }
+    });
+    document.addEventListener('click', function(e){
+      if(!e.target.closest('.search')){ qout.classList.remove('show'); }
+    });
+  }
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY > 520){ toTop.classList.add('show'); }
+    else{ toTop.classList.remove('show'); }
+    highlight();
+  }
+  if(toTop){
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* 侧栏高亮 */
+  var links = Array.prototype.slice.call(document.querySelectorAll('#sidenav a'));
+  var secs = links.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  function highlight(){
+    if(!secs.length) return;
+    var offset = 38 + 64 + 40;
+    var cur = secs[0];
+    for(var i=0;i<secs.length;i++){
+      if(secs[i].getBoundingClientRect().top - offset <= 0){ cur = secs[i]; }
+    }
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '/#' + cur.id);
+    });
+  }
+  onScroll();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"黑料社区官网二维码",
+  "description":"按码面结构、跳转域名与页面指纹三层核验入口，记录入口变更与仿冒特征。",
+  "inLanguage":"zh-CN"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"扫码后地址栏和识别结果不一样，是什么原因？",
+      "acceptedAnswer":{"@type":"Answer","text":"常见于页面加载过程中发生一次重定向。识别结果显示 A 域名，加载完成后变成 B 域名。等页面静止、地址栏重新展开后再看一次，若两次不同，按不符处理。"}
+    },
+    {
+      "@type":"Question",
+      "name":"二维码贴纸覆盖一定有问题吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"不一定，但需要进一步核对。区分点是贴纸边缘是否与码面定位角重叠，重叠会改变识别结果。侧光拍照后比对识别出的字符串最直接。"}
+    },
+    {
+      "@type":"Question",
+      "name":"导航顺序怎么数才算对？",
+      "acceptedAnswer":{"@type":"Answer","text":"七个栏目从第一项到第七项有固定次序，名称逐字一致才算对。改一个字、换一个近义词、或把某一项提前两位，都记为不一致。"}
+    },
+    {
+      "@type":"Question",
+      "name":"页面更新日期停在十天前要紧吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"当前更新节奏是每周至少一次，停十天意味着超过一个周期未动。单独一项不足以定性，需与域名、导航一并判断。"}
+    },
+    {
+      "@type":"Question",
+      "name":"手机上怎么看完整域名？",
+      "acceptedAnswer":{"@type":"Answer","text":"滚动页面时地址栏会自动收起，手指轻触屏幕顶部或向下轻扫即可重新展开。部分浏览器可点地址栏左侧信息图标查看完整内容。"}
+    },
+    {
+      "@type":"Question",
+      "name":"被标为观察的入口还能用吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"观察标记只表示某一项待复核，不代表已确认不可信。等 48 小时复核窗口过去，再看最终结论。"}
+    },
+    {
+      "@type":"Question",
+      "name":"截图要截哪几处才有复核价值？",
+      "acceptedAnswer":{"@type":"Answer","text":"完整地址栏、栏目导航、页面更新日期三处，文件名带上日期。只截内容页没有域名，无法用于复核。"}
+    }
+  ]
+}
+</script>
+
+</body>
+                </html>
